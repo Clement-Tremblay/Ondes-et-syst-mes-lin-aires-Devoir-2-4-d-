@@ -10,8 +10,8 @@ temps = np.linspace(2 * np.pi, 100 * np.pi, 100000)   # 100 temps entre 0 et 20 
 
 champ_des_vitesses = np.linspace(-1, 1, 100) * vitesse_initiale   # 100 valeurs entre -v et v, à multiplier avec la dispersion en %
 
-# tests avec dispersion de 10%
-champ_des_vitesses *= 0.4   # delta vitesse
+
+champ_des_vitesses *= 0.4   # disperion de la vitesse
 champ_des_vitesses += vitesse_initiale     # 100 vitesses entre -sigma et sigma
 champ_des__delta_fréquences = champ_des_vitesses * ((2/vitesse_son)*fréquence_initiale)     # delta w pour les différentes vitesses
 champ_des_fréquences = champ_des__delta_fréquences + (np.ones((1,100)) * fréquence_initiale)    # w pour les différentes vitesses
