@@ -1,0 +1,1 @@
+Ce programme produit un graphique de l'amplitude de l'onde reçue par le détecteur. L'axe est un pourcentage de l'amplitude maximale (ie le max sur les y = amplitude max) et l'axe des x donne le nombre d'intervalles de temps (j'étais trop paresseux pour mettre le nombre de périodes).
