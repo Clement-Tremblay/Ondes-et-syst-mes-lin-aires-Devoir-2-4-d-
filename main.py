@@ -2,15 +2,15 @@ import numpy as np
 import matplotlib.pyplot as mpl
 
 
-fréquence_initiale = 5000000     # Hz
+fréquence_initiale = 2000000     # Hz
 vitesse_initiale = 0.5      # m/s
 vitesse_son = 1500      # m/s, selon le numéro
-temps = np.linspace(0, 500 * np.pi, 125000)   # plusieurs (we do a little trolling) intervalles de temps entre 0 et x * pi
+temps = np.linspace(0, 1000 * np.pi, 536874)   # plusieurs (we do a little trolling) intervalles de temps entre 0 et x * pi
 
 champ_des_vitesses = np.linspace(-1, 1, 100) * vitesse_initiale   # 100 valeurs entre -v et v, à multiplier avec la dispersion en %
 
 
-champ_des_vitesses *= 0.75   # dispersion de la vitesse
+champ_des_vitesses *= 1   # dispersion de la vitesse
 champ_des_vitesses += vitesse_initiale     # 100 vitesses entre -sigma et sigma
 champ_des__delta_fréquences = champ_des_vitesses * ((2/vitesse_son)*fréquence_initiale)     # delta w pour les différentes vitesses
 champ_des_fréquences = champ_des__delta_fréquences + (np.ones((1,100)) * fréquence_initiale)    # w pour les différentes vitesses
